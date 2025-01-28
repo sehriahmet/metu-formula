@@ -6,6 +6,10 @@
     <title>ODTU Formula Team</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
+    <!-- alttaki sonra silinebilir -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
 <body>
     
@@ -17,7 +21,7 @@
         <label id="overlay" for="sidebar-active"></label>
         
         <div class="main-logo" href="index.html">
-            <img src="assets/MFR_logo_FullWhite.png" alt="ODTU Formula Team" class="main-logo-image">
+            <a href="index.html" style="opacity:1; padding: 0;"><img src="assets/MFR_logo_FullWhite.png" alt="ODTU Formula Team" class="main-logo-image" /> </a>
         </div>
         
         <div class="links-container">
@@ -25,12 +29,12 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </label>
 
-            <a class="active-nav-element" href="index.html">Anasayfa</a>
-            <a href="takim.html">Takım</a>
-            <a href="araclar.html">Araclar</a>
-            <a href="sponsorlarimiz.html">Sponsorlarimiz</a>
-            <a href="bizekatilin.html">Bize Katilin</a>
-            <a href="iletisim.html">Iletisim</a>
+            <a class="active-nav-element" href="#">Anasayfa</a>
+            <a href="team.html">Takım</a>
+            <a href="cars.html">Araçlar</a>
+            <a href="sponsors.html">Sponsorlarımız</a>
+            <a href="joinus.html">Bize Katılın</a>
+            <a href="contact.html">İletişim</a>
 
             <!-- <button>TR</button>
             <button>EN</button> -->
@@ -93,10 +97,10 @@
           <div class="selector" id="features">
       
             <div class="tab-cont">
-              <button class="but active feature-1 tab-item" onclick="feature(event, 'feature-1')">Feature 1</button>
-              <button class="but feature-2 tab-item" onclick="feature(event, 'feature-2')">Feature 2</button>
-              <button class="but feature-3 tab-item" onclick="feature(event, 'feature-3')">Feature 3</button>
-              <button class="but feature-4 tab-item" onclick="feature(event, 'feature-4')">Feature 4</button>
+              <button class="but active feature-1 tab-item" onclick="feature(event, 'feature-1')">Etap 1</button>
+              <button class="but feature-2 tab-item" onclick="feature(event, 'feature-2')">Etap 2</button>
+              <button class="but feature-3 tab-item" onclick="feature(event, 'feature-3')">Etap 3</button>
+              <button class="but feature-4 tab-item" onclick="feature(event, 'feature-4')">Etap 4</button>
             </div>
       
             <div class="tab-content feature-1 active tab-item" id="feature-1">
@@ -171,6 +175,51 @@
         </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Adres</h4>
+                    <ul>
+                        <li><a href="https://maps.app.goo.gl/Ahv4kUTiRNMrG7Lm8">
+                            Orta Doğu Teknik Üniversitesi <br>
+                            Robot Topluluğu Binası <br>
+                            06800, Çankaya Ankara
+                            </a>
+                        </li>
+                        
+                        <!-- <li><a href="#">about us</a></li> -->
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>İletişim</h4>
+                    <ul>
+                        
+                        <li ><a href="mailto:contact@meturacing.org" style="text-decoration: none; text-transform: none;">contact@meturacing.org</a></li>
+                        
+                    </ul>
+                    <div class="social-links" style="padding-top: 20px;">
+                        <a href="https://www.instagram.com/meturacing/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/metuformularacing/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@meturacing"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@metuformularacing/"><i class="fab fa-youtube"></i></a>
+
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Ana Sponsor</h4>
+                    <ul>
+                        <!-- <li><a href="#">Next Level Robotics</a></li> -->
+                        <li><a href="#"><img src="assets/Homepage/Ana_Sponsor_Logosu.webp" alt="next level robotics"></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 
 
