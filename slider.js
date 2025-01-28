@@ -25,7 +25,7 @@ prev.onclick = function() {
     reloadslider();
 }
 
-let autoslide = setInterval(() => { next.click(); }, 3000);
+let autoslide = setInterval(() => { next.click(); }, 3500);
 
 function reloadslider() {
     let checkleft = items[active].offsetLeft;
