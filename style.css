@@ -471,10 +471,17 @@ ul{
 
 #team {
     padding-top: 120px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.team-member-row hr {
+    opacity: 0.3;
+    margin-top: 15px;
 }
 
 .our-team-container {
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .gray {
@@ -486,7 +493,7 @@ ul{
   }
   
   .team-member {
-    margin: 15px 0;
+    margin: 10px 0;
     padding: 0;
   }
   
@@ -518,6 +525,7 @@ ul{
   
   .team-member figure img {
     width: 200px;
+    max-width: 100vw;
   }
   
   .team-member figcaption p {
@@ -553,10 +561,11 @@ ul{
     color: transparent;
     background-color: transparent;
     position: absolute;
-    z-index: 996;
+    z-index: 9;
     bottom: 0;
     left: 0;
     width: 120px;
+    max-width: 100vw;
     height: 0;
     overflow: hidden;
     visibility: hidden;
