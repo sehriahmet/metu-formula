@@ -763,8 +763,13 @@ ul{
 }
 
 .sponsor {
-  width: 256px;
+  width: 172px;
   max-width: 100vw;
+}
+
+.main-sponsor, 
+.diamond-sponsor {
+  width: 256px;
 }
 
 .sponsor img {
