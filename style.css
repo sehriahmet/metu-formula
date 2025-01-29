@@ -794,3 +794,136 @@ ul{
 }
 
 /* ./sponsorlarimiz kismi */
+
+/* bize katilin kismi */
+
+.join-us-slider {
+  width: 70vw;
+  height: 550px;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.join-us-list img{
+  width: 70vw;
+  object-fit: contain;
+}
+
+.join-us-slider .buttons button {
+  background-color: rgba(181, 181, 181, 0.333);
+}
+
+@media screen and (max-width: 800px) {
+  .join-us-slider {
+      margin-top: 0;
+      margin: auto;
+      height: 40vh;
+  }
+
+  .join-us-slider .buttons button {
+      background-color: #fff5;
+  }
+
+}
+
+.join-us-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.join-us-container p {
+  padding: 20px;
+  width: 80vw;
+  /* border: 1px solid red; */
+}
+
+.join-us-button {
+  background-color: var(--color-1);
+  color: var(--color-2);
+  font-weight: bold;
+  font-size: larger;
+  padding: 10px 20px;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.join-us-button a {
+  text-decoration: none;
+  color: var(--color-2);
+}
+
+.join-us-button:hover {
+  opacity: 0.8;
+}
+
+.sub-teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 80vw;
+}
+
+.sub-teams img {
+  width: 200px;
+  max-width: 100vw;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15vh auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  position: relative;
+}
+
+.modal-content h2 {
+  padding-left: 15px;
+}
+
+.close-modal {
+  color: #aaa;
+  position: absolute; 
+  top: 10px; 
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ./bize katilin kismi */

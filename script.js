@@ -6,3 +6,34 @@ function feature(e, featureClassName) {
     }
 }
 
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "block";
+    } else {
+        console.error(`Modal with id ${modalId} not found`);
+    }
+}
+
+window.onclick = function(event) {
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++) {
+        if (event.target == modals[i]) {
+            modals[i].style.display = "none";
+        }
+    }
+}
+
+document.querySelectorAll('.close-modal').forEach(function(span) {
+    span.onclick = function() {
+        var modal = span.closest('.modal');
+        modal.style.display = "none";
+    }
+});
+
+document.querySelectorAll('.sub-team').forEach(function(figure) {
+    figure.onclick = function() {
+        var modalId = figure.getAttribute('onclick').match(/'([^']+)'/)[1];
+        openModal(modalId);
+    }
+});
