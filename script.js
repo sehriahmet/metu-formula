@@ -4,5 +4,5 @@ function feature(e, featureClassName) {
       var shouldBeActive = element[i].classList.contains(featureClassName);
       element[i].classList.toggle('active', shouldBeActive);
     }
-  }
-  
+}
+

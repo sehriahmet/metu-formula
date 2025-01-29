@@ -1,44 +1,65 @@
-let list = document.querySelector('.slider .list');
-let items = document.querySelectorAll('.slider .list .item');
-let dots = document.querySelectorAll('.slider .dots li');
-let prev = document.getElementById('prev');
-let next = document.getElementById('next');
+document.addEventListener('DOMContentLoaded', function() {
+    let sliders = document.querySelectorAll('.slider');
 
-let active = 0;
-let lengthitems = items.length - 1;
+    sliders.forEach(slider => {
+        let list = slider.querySelector('.list');
+        let items = slider.querySelectorAll('.list .item');
+        let dots = slider.querySelectorAll('.dots li');
+        let prev = slider.querySelector('.buttons #prev');
+        let next = slider.querySelector('.buttons #next');
 
-next.onclick = function() {
-    if (active + 1 > lengthitems) {
-        active = 0;
-    } else {
-        active = active + 1;
-    }
-    reloadslider();
-}
+        if (!list || items.length === 0 || !prev || !next) {
+            // If the necessary elements are not found, do not run the slider code
+            return;
+        }
 
-prev.onclick = function() {
-    if (active - 1 < 0) {
-        active = lengthitems;
-    } else {
-        active = active - 1;
-    }
-    reloadslider();
-}
+        let active = 0;
+        let lengthitems = items.length - 1;
 
-let autoslide = setInterval(() => { next.click(); }, 3500);
+        next.onclick = function() {
+            if (active + 1 > lengthitems) {
+                active = 0;
+            } else {
+                active = active + 1;
+            }
+            reloadslider();
+        }
 
-function reloadslider() {
-    let checkleft = items[active].offsetLeft;
-    list.style.left = -checkleft + 'px';
+        prev.onclick = function() {
+            if (active - 1 < 0) {
+                active = lengthitems;
+            } else {
+                active = active - 1;
+            }
+            reloadslider();
+        }
 
-    let lastactiveDot = document.querySelector('.slider .dots li.active');
-    if (lastactiveDot) lastactiveDot.classList.remove('active');
-    dots[active].classList.add('active');
-}
+        let autoslide = setInterval(() => { next.click(); }, 8000);
 
-dots.forEach((li, key) => {
-    li.addEventListener('click', function() {
-        active = key;
-        reloadslider();
-    })
-})
+        function reloadslider() {
+            let checkleft = items[active].offsetLeft;
+            list.style.left = -checkleft + 'px';
+
+            let lastactiveDot = slider.querySelector('.dots li.active');
+            if (lastactiveDot) lastactiveDot.classList.remove('active');
+            dots[active].classList.add('active');
+        }
+
+        dots.forEach((li, key) => {
+            li.addEventListener('click', function() {
+                active = key;
+                reloadslider();
+            })
+        });
+
+        // Stop the autoslide when the cursor is over the slider
+        slider.addEventListener('mouseenter', function() {
+            clearInterval(autoslide);
+        });
+
+        // Restart the autoslide when the cursor leaves the slider
+        slider.addEventListener('mouseleave', function() {
+            autoslide = setInterval(() => { next.click(); }, 8000);
+        });
+    });
+});

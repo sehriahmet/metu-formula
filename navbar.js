@@ -22,7 +22,7 @@ function addStyles (selector) {
 addStyles(NavbarSelector);
 
 window.addEventListener('scroll', () => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if (window.scrollY > 10) {
         navbar.classList.add('small');
     } else {
