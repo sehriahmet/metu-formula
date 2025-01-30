@@ -80,28 +80,36 @@
         </div>
         <div class="form">
             <h2 class="form-headline">Bize Ulaşın</h2>
-            <form id="submit-form" action="">
+            <form id="submit-form" action="https://postmail.invotes.com/send" method="post" id="email_form">
                 <p>
-                    <input id="name" class="form-input" type="text" placeholder="Your Name*" required>
+                    <input id="name" name="extra_full_name" class="form-input" type="text" placeholder="Your Name*" required>
                     <small class="name-error"></small>
                 </p>
                 <p>
-                    <input id="phone-number" class="form-input" type="tel" placeholder="Phone Number*" required>
+                    <input id="phone-number" name="extra_phone_number" class="form-input" type="tel" placeholder="Phone Number*" required>
                     <small class="name-error"></small>
                 </p>
                 <p class="full-width">
-                    <input id="email" class="form-input" type="email" placeholder="Your Email*" required>
+                    <input id="email" name="reply_to" class="form-input" type="email" placeholder="Your Email*" required>
                     <small class="name-error"></small>
                 </p>
                 <p class="full-width">
-                    <textarea  minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+                    <textarea name="text" minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
                     <small class="name-error"></small>
                 </p>
                 <p class="full-width">
                     <input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
                 </p>
+                <input type="hidden" name="subject" value="Metu Formula Racing Website Contact Form Submission" />
+                <input type="hidden" name="access_token" value="ebf44ot23j3mk659gwh28ery" />
+                <!-- return urls can be fully qualified -OR-
+                    start with / for root relative -OR-
+                    start with . for url relative --> 
+                <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+                
                 <p class="full-width">
-                    <input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
+                    <input type="submit" id="submit-form" type="submit" value="Send" class="submit-btn" onclick="checkValidations()">
                     <button class="reset-btn" onclick="reset()">Reset</button>
                 </p>
             </form>
@@ -153,6 +161,18 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        var submitButton = document.getElementById("submit_form");
+        var form = document.getElementById("email_form");
+        form.addEventListener("submit", function (e) {
+            setTimeout(function() {
+                submitButton.value = "Sending...";
+                submitButton.disabled = true;
+            }, 1);
+        });
+    </script> 
 
     <script src="reach-us.js"></script>
     <script src="script.js"></script>
