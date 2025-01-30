@@ -75,8 +75,36 @@
                 </span>
             </div>
             <div class="address">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3061.224583049239!2d32.7811743!3d39.8916038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34700149f6d33%3A0x706073bc2416f674!2sMETU%20Formula%20Racing!5e0!3m2!1sen!2str!4v1738197823871!5m2!1sen!2str" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3061.224583049239!2d32.7811743!3d39.8916038!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34700149f6d33%3A0x706073bc2416f674!2sMETU%20Formula%20Racing!5e0!3m2!1sen!2str!4v1738197823871!5m2!1sen!2str" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+        </div>
+        <div class="form">
+            <h2 class="form-headline">Bize Ulaşın</h2>
+            <form id="submit-form" action="">
+                <p>
+                    <input id="name" class="form-input" type="text" placeholder="Your Name*" required>
+                    <small class="name-error"></small>
+                </p>
+                <p>
+                    <input id="phone-number" class="form-input" type="tel" placeholder="Phone Number*" required>
+                    <small class="name-error"></small>
+                </p>
+                <p class="full-width">
+                    <input id="email" class="form-input" type="email" placeholder="Your Email*" required>
+                    <small class="name-error"></small>
+                </p>
+                <p class="full-width">
+                    <textarea  minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+                    <small class="name-error"></small>
+                </p>
+                <p class="full-width">
+                    <input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by call / email about Company's services.
+                </p>
+                <p class="full-width">
+                    <input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
+                    <button class="reset-btn" onclick="reset()">Reset</button>
+                </p>
+            </form>
         </div>
     </div>
 
@@ -126,6 +154,7 @@
         </div>
     </footer>
 
+    <script src="reach-us.js"></script>
     <script src="script.js"></script>
 
 
