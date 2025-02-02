@@ -694,6 +694,14 @@ ul{
     display: none;
 }
 
+.car-content p {
+  line-height: 2rem;
+  width: 70vw;
+  margin: auto;
+  padding-top: 20px;
+  /* max-width: 900px; */
+}
+
 .car-content.active {
     display: block;
 }
@@ -848,6 +856,7 @@ ul{
   padding: 20px;
   width: 80vw;
   /* border: 1px solid red; */
+  overflow: hidden;
 }
 
 .join-us-button {
@@ -901,7 +910,7 @@ ul{
   left: 0;
   top: 0;
   width: 100%; 
-  height: 100%;
+  height: 100%; 
   overflow: auto; 
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4); 
@@ -910,15 +919,36 @@ ul{
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 25vh auto;
+  max-width: 900px; 
+  /* top: 20%; */
+  margin: 20vh auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
   position: relative;
+  max-height: 50vh;
+  overflow: auto;
 }
 
 .modal-content h2 {
   padding-left: 15px;
+}
+
+.modal-content-text {
+  line-height: 2rem;
+}
+
+.modal-content p {
+  width: auto;
+}
+
+.modal-list {
+  display: block;
+  list-style-type: "- ";
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
 }
 
 .close-modal {
