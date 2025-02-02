@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let next = slider.querySelector('.buttons #next');
 
         if (!list || items.length === 0 || !prev || !next) {
-            // If the necessary elements are not found, do not run the slider code
             return;
         }
 
@@ -52,12 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         });
 
-        // Stop the autoslide when the cursor is over the slider
         slider.addEventListener('mouseenter', function() {
             clearInterval(autoslide);
         });
 
-        // Restart the autoslide when the cursor leaves the slider
         slider.addEventListener('mouseleave', function() {
             autoslide = setInterval(() => { next.click(); }, 8000);
         });
