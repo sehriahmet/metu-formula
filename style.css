@@ -544,6 +544,8 @@ ul{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 80vw;
+    margin: auto;
   }
 
   .team-member figure {
@@ -612,7 +614,8 @@ ul{
     background: rgba(230, 78, 62, 0.9);
     /* Primary color, can be changed via colors.css */
     
-    height: 120px;
+    /* height: 120px; */
+    height: 65%;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
