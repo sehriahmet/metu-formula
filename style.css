@@ -222,7 +222,8 @@ nav svg {
     align-items: center;
     max-width: 70vw;
     margin: 0 auto;
-    font: 500 100%/1.5 system-ui;
+    /* font: 500 100%/1.5 system-ui; */
+    font-weight: 400;
 }
 
 .content1 {
@@ -233,6 +234,7 @@ nav svg {
 
 .content1 p {
   line-height: 1.5rem;
+  
 }
 
 .container img {
@@ -286,6 +288,8 @@ nav svg {
 
   .features p {
     line-height: 1.5rem;
+    font-family: Poppins;
+    font-weight: 400;
   }
   
   .selector{
@@ -319,7 +323,7 @@ nav svg {
     background-color: #FFFFFF;
     padding: 24px;
     color: #303132;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-weight: 200;
     font-size: 18px;
     line-height: 26px;
@@ -350,8 +354,8 @@ nav svg {
   
   .tab-cont .but.active{
     background-color: #FFFFFF;
-    color: #3A62CA;
-    border-left: 3px solid #3A62CA;
+    color: #E30A17;
+    border-left: 3px solid #E30A17;
     text-decoration: none;
     outline:0;
     font-weight: 500;
@@ -524,8 +528,13 @@ ul{
   }
   
   .team-member {
-    margin: 10px 0;
+    margin: 10px 20px;
     padding: 0;
+  }
+
+  .team-member h4,
+  .team-member p {
+    padding: 0 10px;
   }
   
   .col-md-12 {
@@ -543,7 +552,10 @@ ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px;
     max-width: 80vw;
     margin: auto;
   }
@@ -572,11 +584,7 @@ ul{
   }
   
   .team-member figcaption ul {
-    visibility: visible;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+    /* visibility: visible; */
   }
   
   .team-member figcaption ul li {
@@ -584,10 +592,6 @@ ul{
     padding: 5px;
   }
   
-  .team-member h4 {
-    margin: 10px 0 0;
-    padding: 0;
-  }
   
   .team-member figcaption {
     padding: 50px;
@@ -606,6 +610,44 @@ ul{
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    text-align: center;
+  }
+
+  .team-member-name {
+    position: absolute;
+    width: 100%;
+    left: -5px;
+  }
+
+  .team-member-edu {
+    position: absolute;
+    left: -5px;
+    font-size: 0.8rem !important;
+    width: 100%;
+    margin-top: 35px;
+  }
+
+  .team-member i {
+    color: #fff;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .team-member i:hover {
+    opacity: 0.8;
+  }
+  
+  .team-member figcaption ul {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Primary color, can be changed via colors.css */
   }
   
   .team-member figure:hover figcaption {
@@ -622,38 +664,11 @@ ul{
     transition: all 0.3s ease-in-out;
   }
   
-  .team-member figure:hover figcaption ul li a:hover {
-    color: rgba(49, 49, 49, .97);
-  }
 
   .team-member figure figcaption ul li {
     display: flex;
     justify-content: center;
     text-align: center;
-  }
-  
-  .team-member figure img {
-    -webkit-transform: scale(1) rotate(0) translateY(0);
-    -moz-transform: scale(1) rotate(0) translateY(0);
-    -o-transform: scale(1) rotate(0) translateY(0);
-    -ms-transform: scale(1) rotate(0) translateY(0);
-    transform: scale(1) rotate(0) translateY(0);
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .team-member figure:hover img {
-    -webkit-transform: scale(1.1) rotate(1deg) translateY(12px);
-    -moz-transform: scale(1.1) rotate(1deg) translateY(12px);
-    -o-transform: scale(1.1) rotate(1deg) translateY(12px);
-    -ms-transform: scale(1.1) rotate(1deg) translateY(12px);
-    transform: scale(1.1) rotate(1deg) translateY(12px);
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
   }
 
 /* ./our team */
