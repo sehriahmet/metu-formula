@@ -33,7 +33,8 @@ nav {
 
 nav#navbar.small {
     height: 70px;
-    background-color: rgba(227, 10, 23, 0.8);
+    /* background-color: rgba(227, 10, 23, 0.8); */
+    /* opacity: 0.8; */
 }
 
 .links-container {
@@ -636,7 +637,7 @@ ul{
   .team-member i:hover {
     opacity: 0.8;
   }
-  
+
   .team-member figcaption ul {
     position: absolute;
     bottom: 10px;
@@ -698,6 +699,12 @@ ul{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.car-title {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .car-content hr {
@@ -811,6 +818,7 @@ ul{
   font-size: 1.5rem;
   align-items: center;
   padding-bottom: 30px;
+  font-weight: bold;
 }
 
 .sponsor {
@@ -845,7 +853,7 @@ ul{
 }
 
 .supporter p:hover {
-  color: #2f7f42;
+  color: #E30A17;
   cursor: pointer;
 }
 
@@ -1053,6 +1061,7 @@ ul{
 
 div.form {
   /* background-color: #eee; */
+  width: 700px;
   max-width: 80vw;
 }
 
